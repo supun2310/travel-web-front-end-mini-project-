@@ -1,0 +1,441 @@
+body {
+    background-color: #ffffff; /* Change this to your desired color */
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    /*background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(img/dest/sigiriya\ 5.jpg);*/
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+ 
+nav{
+    background: #fff;
+    display: flex;
+    padding: 20px 7%;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logo{
+    width: 200px;
+    cursor: pointer;
+    margin-right: auto;
+}
+.nav-links li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+    
+}
+.nav-links li a{
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.nav-links li a:hover{
+    color: #ff5361;
+    border-bottom: 2px solid #ff5361;
+    transition: all 0.2s ease-in;
+}
+.login-btn{
+    margin-left: 20px;
+    background: #171717;
+    color: rgb(247, 242, 242);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+.register-btn{
+    margin-left: 20px;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+
+}
+#menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+    }
+}
+.cover-image {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust this value to change the height of the cover image */
+    overflow: hidden;
+}
+.cover-image img {
+    width: 100%;
+    height: auto;
+}
+
+.cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    font-size: 300px;
+    text-align: center;
+    font-size: 80px; /* Increase text size */
+    font-weight: bold; /* Make text bold */
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5); /* Add drop shadow */
+    /* Other existing styles... */
+}
+.category-container {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    /*background-color: #ddd;*/
+   
+  }
+  .category-card {
+    color: #ffffff;
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    height: 200px;
+    cursor: pointer;
+    position: relative;
+  /* Rest of your CSS... */
+    transition: background-color 0.3s;
+  }
+  .category-card.active {
+    background-color: #333;
+    color: white;
+  }
+  .category-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white; /* Ensure text is visible on the image */
+    /* Rest of your CSS for .category-card... */
+  }
+  
+  .card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin: 0; /* Remove any default margin */
+  }
+  .card-image {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px; /* Adjust as needed */
+  }
+  .card-text {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+
+.card {
+    display: flex;
+    height: auto;
+     
+    /*border: 1px solid #fff9f9;*/
+    
+    overflow: hidden;
+    
+    background-color: rgb(218, 218, 218); 
+    /* Other existing styles... */
+}
+
+.map-side {
+    flex: 1;
+    border-right: 1px solid #ccc;
+    margin-left: 30px;
+}
+
+.map-side img {
+    width: 100%; /* Decrease the size of the image */
+    height: 400px;
+}
+
+
+.description-side {
+    flex: 2;
+    padding: 20px;
+    margin-left:auto ;
+    margin-right:auto ;
+    margin-top:20px;
+    margin-bottom:auto ;
+    align-items: center;
+    
+}
+
+.description-side h3 {
+    margin-top: 0;
+     
+}
+.para-side{
+    margin-right: 100px;
+    margin-top:10px ;
+    text-align: justify;
+
+}
+.title_c{
+    margin-top: 40px;
+    margin-left: 40px;
+
+}
+
+
+
+/*--------------------------------------------------------------------------------------------------*/
+
+.card-container {
+    display: flex;
+    /*justify-content: space-between;*/
+    /*justify-content:center;*/
+    overflow: auto; /* Add this line */
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(42, 41, 43) rgb(240, 239, 237);
+   -ms-overflow-style: none;  /* Internet Explorer and Edge */
+    padding-bottom: 20px; /* Add space at the bottom */
+    margin-top: 20px;
+    margin-left: 30px;
+    
+    
+}
+/*new css part*/
+.card-container::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+.card-container::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+.card-container::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+.card-container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  .card2 {
+    width: 300px;
+    height: auto;
+    border: 1px solid #000;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    border-radius: 15px;
+    margin-left: 0px;
+    margin-right: 20px; /* Add some margin to create space around each card */
+    flex: 0 0 auto;
+}
+
+/* Rest of your CSS... */
+
+
+.image-placeholder {
+    width: 100%;
+    height: 150px;
+    background-color: #ccc;
+    margin-bottom: 20px; /* Adds some space below the image placeholder */
+    background-image: url('  '); /* Add your image path here */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    border-radius: 15px; /* Adjust as needed */
+}
+ 
+
+  .title {
+    display: flex; /* Aligns the title and the like button horizontally */
+    justify-content: space-between; /* Places the title and the like button at the ends */
+    align-items: center; /* Aligns items vertically in the center */
+}
+
+  
+  .category {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  .tags {
+    display: flex; /* Aligns the tags horizontally */
+    justify-content: flex-start; /* Aligns the tags to the left */
+    gap: 10px; /* Adds some space between the tags */
+  }
+  .tags span {
+    font-size: 10px;
+    background-color: #eee;
+    
+    border-radius: 12px; /* Adjust as needed */
+    padding: 5px 10px; /* Adjust as needed */
+  
+  }
+  .like-button {
+    border: none;
+    background: none;
+     
+  }
+
+  /*------------------------------------------------------------------------------------------------------*/
+
+
+  .card_ds {
+    width: 200px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    text-align: center;
+    flex: 0 0 auto;
+    margin-right: 20px;  /* Adjust as needed */
+
+     
+  }
+  
+  .card_ds img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .card_ds h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+  }
+  
+
+
+  /*------------------hotel card d page-----------------------------------*/
+
+  .cardh {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 300px;
+    height:auto;
+    margin-right: 20px;
+  }
+  
+  .cardh img {
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .cardh-container {
+    padding: 2px 16px;
+    text-align: left;
+    width: 200px;
+  }
+  
+  .star-rating {
+    color: gold;
+  }
+  
+  .phone-icon, .location-icon {
+    margin-right: 5px;
+  }
+
+
+  /*------------show more button-----------*/
+  .show-more-container {
+    text-align: right; /* Aligns the button to the right */
+    padding: 10px 0;
+  }
+  .show-more-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 0 15px 15px;
+    cursor: pointer;
+    
+  }
+  
+  .show-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+ /*-----------------foterrr----------------------------------*/
+ .footer{
+  flex: 1;
+  background: #e4e4e4;
+  color: #343434;
+  padding: 30px 7%;
+  margin-top: 60px;
+   
+   }
+.footer p{
+  text-align: justify;
+  font-size: 11px;
+  align-items: left;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin:auto;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.col{
+  flex-basis: 20%;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+.logo img{
+  width: 100%;
+}
+.col img{
+  background:#52504f;
+  position: center;
+  mix-blend-mode: color-burn;
+  
+}
+.footer h3{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}  
+.map {
+  flex: 1;
+  /* Your existing map styles go here */
+  margin-right: 20px;  /* Adjust as needed */
+} 
+.map img {
+  width: 100%;  /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+}
